@@ -1,42 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
   <meta charset="UTF-8">
   <title>BGSI Server Joiner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&amp;display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #1e1e1e;
-      color: white;
+      margin: 0;
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(to bottom, #111, #222);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #1e1e1e;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+      max-width: 480px;
+      width: 100%;
       text-align: center;
-      padding-top: 100px;
     }
-    input, button {
-      padding: 10px;
-      font-size: 16px;
-      margin: 10px;
-      border-radius: 5px;
-      border: none;
+
+    h1 {
+      margin-bottom: 20px;
+      font-weight: 600;
+      font-size: 26px;
     }
+
+    p {
+      font-size: 14px;
+      margin-bottom: 30px;
+      color: #ccc;
+    }
+
     input {
-      width: 400px;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      background: #2a2a2a;
+      color: #fff;
     }
+
     button {
-      background-color: #00b06b;
-      color: white;
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      background-color: #00c87b;
+      color: #fff;
       cursor: pointer;
+      transition: background 0.3s ease;
     }
+
     button:hover {
-      background-color: #009259;
+      background-color: #00a464;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 12px;
+      color: #555;
     }
   </style>
 </head>
 <body>
-  <h1>Join a Bubble Gum Simulator Infinity server.</h1>
-  <p>Enter a <strong>Job ID</strong> to join <strong>Bubble Gum Simulator Infinity</strong></p>
-  <input type="text" id="jobIdInput" placeholder="Enter Job ID here">
-  <br>
-  <button onclick="joinServer()">Join Server</button>
+  <div class="container">
+    <h1>Archisense's BGSI Server Joiner</h1>
+    <p>Enter a Job ID to join...</p>
+    <input type="text" id="jobIdInput" placeholder="Roblox Job ID">
+    <button onclick="joinServer()">Join Server</button>
+    <footer>Click "Always open Roblox" for faster joining.</footer>
+  </div>
 
   <script>
     function joinServer() {
@@ -46,11 +89,10 @@
         return;
       }
 
-      // Construct the roblox join URL
       const placeId = "85896571713843";
       const url = `roblox://placeId=${placeId}&gameInstanceId=${jobId}`;
       window.location.href = url;
     }
   </script>
-</body>
-</html>
+
+</body></html>
