@@ -51,18 +51,24 @@
     button {
       width: 100%;
       padding: 12px;
-      font-size: 16px;
+      background: #00c87b;
+      color: white;
       font-weight: bold;
+      font-size: 16px;
       border: none;
       border-radius: 6px;
-      background-color: #00c87b;
-      color: #fff;
       cursor: pointer;
-      transition: background 0.3s ease;
+      transition: background 0.25s ease, transform 0.1s ease, box-shadow 0.1s ease;
+      box-shadow: 0 4px 0 #009963;
     }
 
     button:hover {
-      background-color: #00a464;
+      background: #00b370;
+    }
+
+    button:active {
+      transform: translateY(2px);
+      box-shadow: 0 2px 0 #009963;
     }
 
     footer {
@@ -94,5 +100,6 @@
       window.location.href = url;
     }
   </script>
+
 
 </body></html>
